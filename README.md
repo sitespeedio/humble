@@ -1,7 +1,8 @@
 # Humble - Raspberry Pi WiFi network link conditioner
 
-Connect your Raspberry Pi4 with your router turn on the Pi and join your new configurable WiFi network named `humble`. Access your Raspberry Pi4 through HTTP and choose the WiFi speed.
+Connect your Raspberry Pi4 with your router turn on the Pi and join your new configurable WiFi network named `humble`. Access your Raspberry Pi4 through HTTP and choose the WiFi speed like this:
 
+![throttle](https://user-images.githubusercontent.com/540757/146691181-4bef0437-fa58-41a4-a5ae-1d12da7bbf05.gif)
 
 ## Background
 Inspired by Sam Smiths [PiNC](https://github.com/phuedx/pinc) I wanted to make a easy way for everyone (not just developers) to try out different internet speeds.
