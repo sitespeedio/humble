@@ -34,7 +34,7 @@ You need a Raspberry Pi 4 with a Ethernet cable that you can connect to your rou
 3. Insert the SD card into the Raspberry Pi 4.
 4. Connect your Raspberry Pi with your router through a Ethernet cable and turn on your Raspberry Pi.
 5. Join your new configurable `humble` WiFi network on desktop or mobile phone with the password `goslowtogoFAST`.
-6. Access your Raspberry Pi through HTTP and chose the WiFi speed. On Mac access `http://Raspberry Pi.local:3001` from your web browser. On other OS you can use `nmap` to [find your Raspberry IP address](https://community.wia.io/d/11-how-to-set-up-a-raspberry-pi-without-an-external-monitor-or-keyboard). Access that IP using port 3001 in your browser.
+6. Access your Raspberry Pi through HTTP and chose the WiFi speed. On Mac access `http://raspberrypi.local:3001` from your web browser. On other OS you can use `nmap` to [find your Raspberry IP address](https://community.wia.io/d/11-how-to-set-up-a-raspberry-pi-without-an-external-monitor-or-keyboard). Access that IP using port 3001 in your browser.
 7. Choose the WiFi speed.
 
 When you checked that everything works you should change the WiFi password and the SSH password!
@@ -116,8 +116,8 @@ Thank you SpaceRex for your tutorial [Turn your Raspberry Pi into a WiFi Router!
 1. Download and install the latest [Raspberry Pi OS Lite](https://www.raspberrypi.com/software/operating-systems/) image to a SD card using [Raspberry Pi Imager](https://www.raspberrypi.com/software/).
 2. Add an empty file named `SSH` to root section of the SD card so you more easily can access the Raspberry Pi.
 3. Insert the SD card into the Raspberry Pi, connect your Raspberry Pi with your router through a Ethernet cable and turn on your Raspberry Pi.
-4. Find the IP number of your Raspberry Pi, use `nmap` to [find your Raspberry IP address](https://community.wia.io/d/11-how-to-set-up-a-raspberry-pi-without-an-external-monitor-or-keyboard) or on Mac just use `Raspberry Pi.local`.
-5. Login to your Raspberry using SSH (this example if for Mac): `SSH pi@Raspberry Pi.local` with password `raspberry`.
+4. Find the IP number of your Raspberry Pi, use `nmap` to [find your Raspberry IP address](https://community.wia.io/d/11-how-to-set-up-a-raspberry-pi-without-an-external-monitor-or-keyboard) or on Mac just use `raspberrypi.local`.
+5. Login to your Raspberry using SSH (this example if for Mac): `SSH pi@raspberrypi.local` with password `raspberry`.
 6. Once you logged in, change the password for the *pi* user using `passwd` to set a new password.
 
 Now you are ready to turn your Raspberry Pi into a WiFi router.
@@ -253,4 +253,4 @@ Start the frontend with:
 node lib/app.js
 ```
 
-And open your browser and access ```http://<Raspberry Piip>:3001```
+And open your browser and access ```http://<raspberrypiip>:3001```
