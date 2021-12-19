@@ -4,6 +4,24 @@ Connect your Raspberry Pi4 with your router turn on the Pi and join your new con
 
 ![throttle](https://user-images.githubusercontent.com/540757/146691181-4bef0437-fa58-41a4-a5ae-1d12da7bbf05.gif)
 
+Table of Contents
+=================
+* [Background](#background)
+* [Prerequisite](#prerequisite)
+* [Install using the pre-made image](#install-using-the-pre-made-image)
+  * [Log into the device](#log-into-the-device)
+  * [Changing WiFi password](#changing-wifi-password)
+  * [Changing SSH login password](#changing-ssh-login-password)
+  * [Use a USB WiFi antenna](#use-a-usb-wifi-antenna)
+  * [Raspberry Pi image setup](#raspberry-pi-image-setup)
+  * [Change WiFi geographical location](#change-wifi-geographical-location)
+  * [Turn on auto update for the Throttle front end](#turn-on-auto-update-for-the-throttle-front-end)
+* [Install from scratch](#install-from-scratch)
+  * [Install the OS and prepare your device](#install-the-os-and-prepare-your-device)
+  * [Enable WiFi](#enable-wifi)
+  * [Install and setup](#install-and-setup)
+  * [Install throttle frontend](#install-throttle-frontend)
+
 ## Background
 Inspired by Sam Smiths [PiNC](https://github.com/phuedx/pinc) I wanted to make a easy way for everyone (not just developers) to try out different internet speeds.
 
