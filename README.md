@@ -30,7 +30,7 @@ You need a Raspberry Pi 4 with a Ethernet cable that you can connect to your rou
 
 ## Install using the pre-made image
 1. Download the pre-made image from [releases](https://github.com/sitespeedio/humble/releases).
-2. Burn the image on a SD card using [Raspberry Pi Imager](https://www.Raspberry Pi.com/software/).
+2. Burn the image on a SD card using [Raspberry Pi Imager](https://www.raspberrypi.com/software/).
 3. Insert the SD card into the Raspberry Pi 4.
 4. Connect your Raspberry Pi with your router through a Ethernet cable and turn on your Raspberry Pi.
 5. Join your new configurable `humble` WiFi network on desktop or mobile phone with the password `goslowtogoFAST`.
@@ -113,7 +113,7 @@ And then add the following lines:
 Thank you SpaceRex for your tutorial [Turn your Raspberry Pi into a WiFi Router!](https://www.youtube.com/watch?v=laeOmNDE-Ac), that helped me a lot to set this up! Checkout the [video](https://www.youtube.com/watch?v=laeOmNDE-Ac) for more details.
 
 ### Install the OS and prepare your device
-1. Download and install the latest [Raspberry Pi OS Lite](https://www.Raspberry Pi.com/software/operating-systems/) image to a SD card using [Raspberry Pi Imager](https://www.Raspberry Pi.com/software/).
+1. Download and install the latest [Raspberry Pi OS Lite](https://www.raspberrypi.com/software/operating-systems/) image to a SD card using [Raspberry Pi Imager](https://www.raspberrypi.com/software/).
 2. Add an empty file named `SSH` to root section of the SD card so you more easily can access the Raspberry Pi.
 3. Insert the SD card into the Raspberry Pi, connect your Raspberry Pi with your router through a Ethernet cable and turn on your Raspberry Pi.
 4. Find the IP number of your Raspberry Pi, use `nmap` to [find your Raspberry IP address](https://community.wia.io/d/11-how-to-set-up-a-raspberry-pi-without-an-external-monitor-or-keyboard) or on Mac just use `Raspberry Pi.local`.
