@@ -173,7 +173,7 @@ sudo iptables -t nat -A POSTROUTING -o eth0 -j MASQUERADE
 sudo netfilter-persistent save
 ```
 
-6. The step prepare your Raspberry tp be a router and setup which IP addresses devices will have when they connect. That happens on `/etc/dnsmasq.conf`. 
+6. The step prepare your Raspberry to be a router and setup which IP addresses devices will have when they connect. That happens on `/etc/dnsmasq.conf`. 
 
 As a first step, move the old version so we have a backup:
 
