@@ -1,5 +1,7 @@
 # CHANGELOG - humble (we use [semantic versioning](https://semver.org))
 
+## 0.1.2
+* Added so power savings is turned off on startup for wlan0.
 ## 0.1.1
 ### Fixed
 * Make sure unattended-upgrades runs automatically. 

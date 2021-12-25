@@ -65,6 +65,19 @@ The new WiFi will probably be `wan1` on your Raspberry and that means you need t
 3. Edit */etc/hostapd/hostapd.conf* with `sudo nano /etc/hostapd/hostapd.conf` and change `wan0` to `wan1`.
 4. Reboot by `sudo reboot`.
 
+----
+If you use another antenna you need to make sure that the WiFI do not go to sleep mode. You can check your setup with `iwcofig` and look for the power option for you WiFi.
+
+To turnoff sleeping mode you can run:
+
+`sudo iw wlan1 set power_save off`
+
+And for turning it off for startup you need to edit:
+
+```sudo nano /etc/rc.local```
+
+Then before *exit 0* add the following line:
+```/sbin/iwconfig wlan1 power off```
 ### Raspberry Pi image setup
 The image (based on Raspberry Pi OS Lite) has the following extra setup:
 
@@ -151,12 +164,12 @@ sudo nano /etc/dhcpcd.conf
 ```
 
 Then add at the bottom of the file:
-````
+```
 interface wlan0
     static ip_address=10.20.1.1/24
     nohook wpa_supplicant
 
-````
+```
 
 5. Then edit `/etc/sysctl.d/routed-ap.conf` to forward ipv4 adresses.
 
@@ -173,7 +186,7 @@ sudo iptables -t nat -A POSTROUTING -o eth0 -j MASQUERADE
 sudo netfilter-persistent save
 ```
 
-6. The step prepare your Raspberry to be a router and setup which IP addresses devices will have when they connect. That happens on `/etc/dnsmasq.conf`. 
+7. The step prepare your Raspberry to3. be a router and setup which IP addresses devices will have when they connect. That happens on `/etc/dnsmasq.conf`. 
 
 As a first step, move the old version so we have a backup:
 
@@ -192,7 +205,7 @@ domain=wlan
 address=/rt.wlan/10.20.1.1
 ```
 
-7. Setup your host access point file. Edit `/etc/hostapd/hostapd.conf`
+8. Setup your host access point file. Edit `/etc/hostapd/hostapd.conf`
 Here you need to add your country code again (https://en.wikipedia.org/wiki/ISO_3166-1) and set a password (`wpa_passphrase`) and a name `ssid` of your WiFi network.
 
 Open the file:
@@ -222,7 +235,14 @@ Change the `country_code` to your country code.
 It's also in this configuration file you choose what frequency your WiFi network will be on.     
 `hw_mode`can be either *a* = 5GHz, *b* = 2.4Ghz or *g* =2.4 GHz.
 
-8. The WiFI setup is done. Reboot your Pi `sudo reboot` and try to connect to your WiFi network on your desktop or mobile.
+9. Make sure your WiFI has power save turned off (*Power Management:off*). First check that power saving is turned on by running `iwcofig`. If it's on, you can make sure that is turned off on startup by:
+
+```sudo nano /etc/rc.local```
+
+Then before *exit 0* add the following line:
+```/sbin/iwconfig wlan0 power off```
+
+10. The WiFI setup is done. Reboot your Pi `sudo reboot` and try to connect to your WiFi network on your desktop or mobile.
 
 ### Install throttle frontend
 To be able to run the frontend you need to install NodeJS. [Install latest LTS](https://nodejs.org/en/), when I write this that version is 16.13.1. 
