@@ -21,6 +21,7 @@ Table of Contents
   * [Enable WiFi](#enable-wifi)
   * [Install and setup](#install-and-setup)
   * [Install throttle frontend](#install-throttle-frontend)
+* [Change throttling using the API](#change-throttling-using-the-API)
 
 ## Background
 Inspired by Sam Smiths [PiNC](https://github.com/phuedx/pinc) I wanted to make a easy way for everyone (not just developers) to try out different internet speeds.
@@ -274,3 +275,22 @@ node lib/app.js
 ```
 
 And open your browser and access ```http://<raspberrypiip>:3001```
+
+## Change throttling using the API
+Instead of using the graphical frontend, you can use the API to change the throttling. Call the API with the profile you want to use. 
+
+Set throttling to cable:
+
+```bash
+curl http://raspberrypi.local:3001/api/cable -H "Accept: application/json"
+```
+
+Set throttling to 3g:
+```bash
+curl http://raspberrypi.local:3001/api/3g -H "Accept: application/json"
+```
+
+Stop throttling:
+```bash
+curl http://raspberrypi.local:3001/api/stop -H "Accept: application/json"
+```
