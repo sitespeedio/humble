@@ -22,6 +22,7 @@ Table of Contents
   * [Install and setup](#install-and-setup)
   * [Install throttle frontend](#install-throttle-frontend)
 * [Change throttling using the API](#change-throttling-using-the-API)
+* [Take a copy of your SD card](#change-throttling-using-the-API)
 
 ## Background
 Inspired by Sam Smiths [PiNC](https://github.com/phuedx/pinc) I wanted to make a easy way for everyone (not just developers) to try out different internet speeds.
@@ -294,3 +295,12 @@ Stop throttling:
 ```bash
 curl http://raspberrypi.local:3001/api/stop -H "Accept: application/json"
 ```
+
+## Take a copy of your SD card
+This is how I do iyt on my Mac. First make sure you have your SD card inserted. Then use `diskutil list` to find the disk. On my computer it's mounted as */dev/disk2*. Then to copy and compress it I use:
+
+```
+sudo dd if=/dev/rdisk2 bs=1m | xz -T 0 -9 -e > /Users/peter/Desktop/pi3-version.xz
+```
+
+Note that I've changed */dev/disk2* to */dev/rdisk2* to make it read only.
