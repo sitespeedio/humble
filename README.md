@@ -188,7 +188,7 @@ sudo iptables -t nat -A POSTROUTING -o eth0 -j MASQUERADE
 sudo netfilter-persistent save
 ```
 
-7. The step prepare your Raspberry to3. be a router and setup which IP addresses devices will have when they connect. That happens on `/etc/dnsmasq.conf`. 
+7. The step prepare your Raspberry to be a router and setup which IP addresses devices will have when they connect. That happens on `/etc/dnsmasq.conf`. 
 
 As a first step, move the old version so we have a backup:
 
@@ -297,7 +297,7 @@ curl http://raspberrypi.local:3001/api/stop -H "Accept: application/json"
 ```
 
 ## Take a copy of your SD card
-This is how I do iyt on my Mac. First make sure you have your SD card inserted. Then use `diskutil list` to find the disk. On my computer it's mounted as */dev/disk2*. Then to copy and compress it I use:
+This is how I do it on my Mac. First make sure you have your SD card inserted. Then use `diskutil list` to find the disk. On my computer it's mounted as */dev/disk2*. Then to copy and compress it I use:
 
 ```
 sudo dd if=/dev/rdisk2 bs=1m | xz -T 0 -9 -e > /Users/peter/Desktop/humble-version.xz
